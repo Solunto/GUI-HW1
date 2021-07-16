@@ -1,0 +1,183 @@
+/*
+    Large thinkingfaceemoji .png found on google, the hosting site says
+    it is free to use and modify without limit.
+    See here: https://www.pngkit.com/bigpic/u2w7q8r5a9i1i1t4/
+
+    I wanted to make the thinkingfaceemoji's spin, but it turns out that's
+    not built into css, at least according to my search results. I guess 
+    the authentic geocities aesthetic is still out of reach...
+*/
+
+body {
+    background-image: url("../images/bigthink.png");
+    background-color: grey;
+    
+}
+
+/*
+    As one might surmise, this styles the title at the top of the page
+    I added a shadow to the text to make it contrast better with the background
+*/
+
+#title {
+    font-size:300%;
+    text-align:center;
+    font-weight:bold;
+    color:navy;
+    text-shadow:1px 1px 3px black;
+    display:block;
+}
+
+/*
+    Not sure why text-align works to center the inner boxes,
+    but if it's going to work I'm not going to complain!
+
+    This is the outer container for the Popo Shrine and the box containing text
+*/
+#frame {
+    overflow:hidden;
+    text-align:center;
+    white-space: nowrap;
+}
+/*
+    I played around with the dimensions until they looked okay to me, and I used VSC's color picker tool to find
+    a color I liked.
+
+    This styles the Popo Shrine box found on the left side of the page.
+*/
+#popo {
+    border-style:groove;
+    border-color:rgb(127, 182, 255);
+    border-width: 2mm;
+    padding-left:1.2%;
+    padding-right:1.2%;
+    max-width:fit-content;
+    min-width:max-content;
+    background-color:paleturquoise;
+    text-align:center;
+    display:inline-block;
+}
+
+/*
+    I originally had set text-align to center in every element below,
+    but then it occured to me that I could simply set it in the outer
+    box and let it be inherited by everything inside. In hindsight,
+    that's pretty obvious.
+    
+    Update: I ended up setting it to center in the outer frame, too, 
+    so it is no longer included in the styling below. This comment is
+    still relevant for the same reasons and so I've left it here for
+    posterity.
+
+    This styles the text "Popo Shrine" found at the top of the Popo Shrine box (#popo)
+*/
+#shrine {
+    font-size:204%;
+    text-decoration: underline;
+    text-decoration-skip-ink:none;
+}
+
+/*
+    This styles the text "The three faces of Popo" in the Popo Shrine box (#popo)
+*/
+#facetitle {
+    font-size:170%;
+    border-style:ridge;
+    border-width:3px;
+    border-left-width:0px;
+    border-right-width:0px;
+    border-color:black;
+}
+
+/*
+    This styles the three lines of text which each precede one popo emoji
+*/
+#happy, #sad, #scared {
+    font-size:130%;
+    border-style:dashed;
+    border-left-style: solid;
+    border-top-width:0px;
+    border-right-width:0px;
+    border-bottom-width:3px;
+    border-left-width:2px;
+    margin:15px;
+}
+
+/*
+    Each of the three popos has its text colored to resemble the emotion. I'm not sure what emotion is ascribed
+    to each color, so I used my best guess out of the RGB colors that are predefined in my IDE. 
+    I was going to use yellow for scaredpopo, but yellow text is really hard to read...
+*/
+#happy {
+    color:green;
+}
+
+#sad {
+    color:blue;
+}
+
+#scared {
+    color:orangered;
+}
+
+/*
+    This styles the box full of text to the right of the page
+*/
+
+#textbody {
+    padding:20px;
+    white-space:normal;
+    background-color:paleturquoise;
+    display:inline-block;
+    vertical-align:top;
+    font-size:142%;
+    max-width:600px;
+    min-width:600px;
+    margin-left:20px;
+    border:groove rgb(127, 182, 255) 2mm;
+}
+
+/*
+    Below stylerules (up until footer) style the Pasta Alignment Chart
+*/
+
+th, tr, td {
+    padding:5px;
+    font-size:88%;
+    border: black solid 2px;
+}
+th {
+    font-size:120%
+}
+#law, #neu, #cha, #gd, #neu2, #ev {
+    font-weight:bold;
+}
+#law {
+    color:navy;
+}
+
+.neu {
+    color:grey;
+}
+
+#cha {
+    color:green;
+}
+
+#gd {
+    color:blue
+}
+
+#ev {
+    color:red;
+}
+
+/*
+    Styles the footer. I once again added a shadow to the text for better contrast
+*/
+
+footer {
+    text-align:center;
+    text-shadow:1px 1px 2px black;
+    font-size:85%
+}
